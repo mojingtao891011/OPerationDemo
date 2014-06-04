@@ -7,6 +7,10 @@
 //
 
 #import "ViewController.h"
+#import "NetServer.h"
+#import "URLOperation.h"
+#import "DevicesInfoModel.h"
+#import "RecordModel.h"
 
 @interface ViewController ()
 
@@ -17,7 +21,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+	
+        
+
+    [[NetServer shareManager]getNeedCommand:@"2074" andNeedUserId:@"50" AndNeedBobyArrKey:@[@"req_id"] andNeedBobyArrValue:@[@"-1"] needFininshBlock:^(id result){
+       
+        NSLog(@"%@" , result);
+        
+    }needFailBlock:^(id fail){
+        
+    }];
 }
 
 - (void)didReceiveMemoryWarning
