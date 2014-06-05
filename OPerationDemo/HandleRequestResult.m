@@ -57,7 +57,7 @@
       //  model.recordName = dict[@"name"];
         [mutableArr addObject:model];
     }
-    [NetServer shareManager].fininshBlock(mutableArr);
+    [NetServer shareManager].fininshBlock(result);
     
 }
 @end
